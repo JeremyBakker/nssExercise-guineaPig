@@ -38,7 +38,7 @@ function out(event) {
 
 /***** When you type characters into the input field, the output element should mirror the text in the input field. *****/
 // The first line here adds an event listener to the <input> element to capture the user input. I chose "keyup" rather 
-	// than "keydown" or "keypress" because the latter two fail to register keystrokes until the user presses a second key. 
+  // than "keydown" or "keypress" because the latter two fail to register keystrokes until the user presses a second key. 
   // I wanted to allow for a single character to display.
 // The function displays the user input in the output section. 
 document.getElementsByTagName("input")[0].addEventListener("keyup", mirror);
