@@ -4,10 +4,11 @@
 // What follows those comments explains the code.
 
 
-/***** When any section is clicked the output target text should be "You clicked on the {text of the section} section" *****/
+/***** When any section is clicked the output target text should be "You clicked on the {text of the section} 
+	section" *****/
 // The first line here targets the output element.
-// The loop puts an event listener on all the section elements. Adding an event listener to elements identified by class requires
-	// a loop because each element is catalogued by an index value.
+// The loop puts an event listener on all the section elements. Adding an event listener to elements identified by class 
+  // requires a loop because each element is catalogued by an index value.
 // The function grabs the text of the section clicked and displays it in the output element. 
 var outputEl = document.getElementById("output-target");
 for (var i = 0; i < document.getElementsByClassName("article-section").length; i++) {
@@ -18,7 +19,8 @@ function sectionClick(MouseEvent){
 	outputEl.innerHTML = "You clicked on the " + elementText;
 }
 
-/***** When the mouse is over the <h1> tag, the output element should contain the text "You moved your mouse over the header". *****/
+/***** When the mouse is over the <h1> tag, the output element should contain the text "You moved your mouse over the 
+	header". *****/
 // The first line here adds an event listener to the <h1> element.
 // The function takes the string on the right side of the equation on line 24 and displays it in the output element.
 document.getElementsByTagName("h1")[0].addEventListener("mouseover", hover);
@@ -35,8 +37,8 @@ function out(event) {
 }
 
 /***** When you type characters into the input field, the output element should mirror the text in the input field. *****/
-// The first line here adds an event listener to the <input> element to capture the user input. I chose "keyup" rather than "keydown" 
-  // or "keypress" because the latter two fail to register keystrokes until the user presses a second key. 
+// The first line here adds an event listener to the <input> element to capture the user input. I chose "keyup" rather 
+	// than "keydown" or "keypress" because the latter two fail to register keystrokes until the user presses a second key. 
   // I wanted to allow for a single character to display.
 // The function displays the user input in the output section. 
 document.getElementsByTagName("input")[0].addEventListener("keyup", mirror);
@@ -45,8 +47,9 @@ function mirror(event) {
 }
 
 /***** When you click the "Add color" button, the guinea-pig element's text color should change to blue. *****/
-// Each of the next four sections works on the same logic: 1) add an event listener that fires a function on the click of a button; 
-	// 2) toggle the class list for the guinea-pig element to add or take away the particular class identified in the function
+// Each of the next four sections works on the same logic: 1) add an event listener that fires a function on the 
+	// click of a button; 2) toggle the class list for the guinea-pig element to add or take away the particular 
+	// class identified in the function.
 document.getElementById("add-color").addEventListener("click", blue);
 function blue(event) {
 	document.getElementById("guinea-pig").classList.toggle("blue");
